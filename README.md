@@ -1,53 +1,14 @@
 
 <h1 align="center">
 
-  <br>
-  Zyte Project
+  <br>  
+  QA Automation for REST API
   <br>
 </h1>
 
-# Product QA Trial
-
-## Technical Assessment 
-Consider a scenario where the business analyst did not create a well detailed documentation. It lacks some pieces of information however as a QA Engineer the challenge is to connect some points and fill as many gaps as you can in order to test the main use cases properly.
-
 ## SUT (system or subject under test)
-Json Server repository: https://github.com/typicode/json-server
-Data Model:
+Regarding the Json Server repository: https://github.com/typicode/json-server , I built in Python this solution for performing API testing
 
-```
-{
-    "posts": [
-        { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-        { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profiles": [{ "name": "typicode" }]
-}
-```
-
-## Main Use Cases
-1. As a user, I want to create new user profile
-    - Method: POST 
-    - Url: http://localhost:3000/profile
-    - Body: 
-        ```{ "name": "any name" }```
-    - Refer for further documentation on how API works on the github repo
-
-2. As a user, I want to post new content
-3. As a user, I want to comment on post of someone else
-4. As a user, I want to see my post by post id
-5. As a user, I want to see the comments on my post by post id
-6. As a manager, I want to be able to search profiles by name in order to validate if they exist
-
-## Challenge
-1. Extract tests from the provided information
-    - Create as many tests as you can
-    - Write down the tests in english
-    - Save them in the repo in the format of your choice
-2. Automate as many tests as you can using the technologies of your choice
-    - All instructions needed to run the automated tests should be in a file README.md
 
 <h2 align="center">
 
