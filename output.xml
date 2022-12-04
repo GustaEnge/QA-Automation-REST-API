@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.13 on win32)" generated="20221114 22:51:33.726" rpa="false" schemaversion="2">
+<suite id="s1" name="Api Test Comments" source="f:\GitHub\ZyteProject\test_cases\api_test_comments.robot">
+<test id="s1-t1" name="Create Comment">
+<kw name="API Create Comments" library="API_Core">
+<var>${result_api}</var>
+<arg>Ipsum Lorem 3</arg>
+<arg>3</arg>
+<msg timestamp="20221114 22:51:36.579" level="INFO">${result_api} = {'body': 'Ipsum Lorem 3', 'postId': '3', 'id': 32}</msg>
+<status status="PASS" starttime="20221114 22:51:34.226" endtime="20221114 22:51:36.584"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${id}</var>
+<arg>${result_api}[id]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221114 22:51:36.591" level="INFO">${id} = 32</msg>
+<status status="PASS" starttime="20221114 22:51:36.588" endtime="20221114 22:51:36.591"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${id}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20221114 22:51:36.595" level="INFO">${id} = 32</msg>
+<status status="PASS" starttime="20221114 22:51:36.593" endtime="20221114 22:51:36.595"/>
+</kw>
+<status status="PASS" starttime="20221114 22:51:34.223" endtime="20221114 22:51:36.597"/>
+</test>
+<test id="s1-t2" name="Get Comment">
+<kw name="API Get Comments" library="API_Core">
+<arg>${id}</arg>
+<status status="PASS" starttime="20221114 22:51:36.604" endtime="20221114 22:51:36.709"/>
+</kw>
+<status status="PASS" starttime="20221114 22:51:36.601" endtime="20221114 22:51:36.713"/>
+</test>
+<test id="s1-t3" name="Update Comment">
+<kw name="API Update Comments" library="API_Core">
+<var>${result_api}</var>
+<arg>${id}</arg>
+<arg>Ipsum Lorem 89</arg>
+<arg>3</arg>
+<msg timestamp="20221114 22:51:36.796" level="INFO">${result_api} = {'body': 'Ipsum Lorem 89', 'postId': '3', 'id': 32}</msg>
+<status status="PASS" starttime="20221114 22:51:36.723" endtime="20221114 22:51:36.796"/>
+</kw>
+<status status="PASS" starttime="20221114 22:51:36.722" endtime="20221114 22:51:36.805"/>
+</test>
+<test id="s1-t4" name="Delete Comment">
+<kw name="API Delete Comments" library="API_Core">
+<arg>${id}</arg>
+<status status="PASS" starttime="20221114 22:51:36.816" endtime="20221114 22:51:36.846"/>
+</kw>
+<status status="PASS" starttime="20221114 22:51:36.812" endtime="20221114 22:51:36.847"/>
+</test>
+<status status="PASS" starttime="20221114 22:51:33.751" endtime="20221114 22:51:36.854"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Api Test Comments">Api Test Comments</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
